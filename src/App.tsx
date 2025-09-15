@@ -1,4 +1,5 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link, Outlet } from 'react-router-dom'
+import CatalogPage from './pages/CatalogPage'
 
 function Home() {
   return <h1>Home</h1>
@@ -15,11 +16,14 @@ export default function App() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
       </nav>
-
+      <main>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Outlet />
         <Route path="/about" element={<About />} />
       </Routes>
+      </main>
     </div>
   )
 }
