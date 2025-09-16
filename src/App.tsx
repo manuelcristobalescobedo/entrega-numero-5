@@ -1,29 +1,14 @@
-import { Routes, Route, Link, Outlet } from 'react-router-dom'
-import CatalogPage from './pages/CatalogPage'
-
-function Home() {
-  return <h1>Home</h1>
-}
-
-function About() {
-  return <h1>About</h1>
-}
+import { Outlet, Link } from "react-router-dom";
 
 export default function App() {
   return (
-    <div style={{ padding: '1rem' }}>
-      <nav style={{ display: 'flex', gap: '1rem' }}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-      <main>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/catalog" element={<CatalogPage />} />
+    <div className="min-h-screen bg-gray-50">
+      <header className="p-4 bg-blue-600 text-white font-bold text-xl">
+        Catálogo de productos
+      </header>
+      <main className="p-6">
         <Outlet />
-        <Route path="/about" element={<About />} />
-      </Routes>
       </main>
     </div>
-  )
+  );
 }
