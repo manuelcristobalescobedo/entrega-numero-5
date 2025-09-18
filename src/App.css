@@ -107,6 +107,11 @@ html, body {
             padding: 0;
         }
 
+         .SeccionPrincipal {
+            padding: 6rem 6rem 0 6rem;
+            background: lightcyan;
+        }
+
         .SeccionBusqueda {
             padding: 6rem 6rem 0 6rem;
             background: lightcyan;
