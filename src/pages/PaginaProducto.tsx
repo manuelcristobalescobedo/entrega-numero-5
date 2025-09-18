@@ -9,6 +9,9 @@ import "../App.css"
 export default function PaginaProducto() {
   const { id } = useParams();
 
+  CarritoCompra();
+  Filtro();
+  
   return (
     <>
         <body>
@@ -373,7 +376,7 @@ export default function PaginaProducto() {
             </svg>
         </button>
         <button className="abrir-filtros">
-            <div style={{ backgroundImage: "url(Imagen5.jpg)" }}></div>
+            <div style={{ backgroundImage: "url(public/photos/Imagen5.jpg)" }}></div>
         </button>
     </header>
 
@@ -386,7 +389,7 @@ export default function PaginaProducto() {
             // ComponenteTarjetaCarro 
             <a className="ComponenteTarjetaCarro">
                 <div>
-                    <div style={{ backgroundImage: "url(Imagen1.jpg)" }}></div>
+                    <div style={{ backgroundImage: "url(public/photos/Imagen1.jpg)" }}></div>
                 </div>
                 <div>
                     <h4>Título del ítem</h4>
@@ -406,7 +409,7 @@ export default function PaginaProducto() {
             // ComponenteTarjetaCarro 
             <a className="ComponenteTarjetaCarro">
                 <div>
-                    <div style={{backgroundImage: "url(Imagen1.jpg)"}}></div>
+                    <div style={{backgroundImage: "url(public/photos/Imagen1.jpg)"}}></div>
                 </div>
                 <div>
                     <h4>Título del ítem</h4>

@@ -20,7 +20,6 @@ header {
 
 .search-bar input:focus {
   border-color: #2563eb;
-  outline: none;
 }
 
 /* Product grid */
@@ -459,6 +458,7 @@ html, body {
             background: none;
             border: none;
             text-decoration: none;
+            position:relative
         }
 
         .Encabezado > a > svg {
@@ -819,7 +819,7 @@ html, body {
         }
 
         .ComponenteGaleria > div:first-child {
-            background-image: url(Imagen1.jpg);
+            background-image: url(public/photos/Imagen1.jpg);
             width: 100%;
             aspect-ratio: 4 / 3;
             background-position: center center;
@@ -830,7 +830,7 @@ html, body {
         }
 
         .ComponenteGaleria > div:nth-child(2) {
-            background-image: url(Imagen2.jpg);
+            background-image: url(public/photos/Imagen2.jpg);
             width: 100%;
             aspect-ratio: 4 / 3;
             background-position: center center;
@@ -839,7 +839,7 @@ html, body {
         }
 
         .ComponenteGaleria > div:last-child {
-            background-image: url(Imagen3.jpg);
+            background-image: url(public/photos/Imagen3.jpg);
             width: 100%;
             aspect-ratio: 4 / 3;
             background-position: center center;
