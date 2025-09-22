@@ -105,6 +105,39 @@ header {
 html, body {
             margin: 0;
             padding: 0;
+            background: lightcyan;
+        }
+
+        .SeccionFiltros {
+            padding: 3rem 3rem 0 3rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .SeccionFiltros > button {
+            display: flex;
+            flex-direction: row;
+            font-size: 1rem;
+            font-family: inherit;
+            background: none;
+            border: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .SeccionFiltros > button > svg {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+
+        .SeccionFiltros > button > p {
+            margin: 0;
+            padding: 0;
         }
 
          .SeccionPrincipal {
@@ -209,6 +242,7 @@ html, body {
             background-repeat: no-repeat;
             background-size: cover;
             color: white;
+            margin-bottom: 6rem;
         }
 
         .SeccionDestacada > div > h1 {
@@ -231,7 +265,7 @@ html, body {
         }
 
         .SeccionCatalogo {
-            padding: 6rem 6rem 0 6rem;
+            padding: 3rem 6rem 0 6rem;
             background: lightcyan;
         }
 
@@ -492,6 +526,16 @@ html, body {
 
         .ComponenteBusquedaPrincipal > input:focus {
             outline: none;
+        }
+ .ComponenteBusquedaPrincipal > input {
+            background: white;
+            font-size: 1rem;
+            font-family: inherit;
+            border: none;
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            flex: 1;
+            margin-right: 0.25rem;
         }
 
         .ComponenteBusquedaPrincipal > button {
