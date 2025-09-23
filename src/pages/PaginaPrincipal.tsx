@@ -29,6 +29,7 @@ return (
                             display: "flex",
                             alignItems: "center",
                             gap: "8px",
+                            cursor: "pointer"
                         }}
                     >
 

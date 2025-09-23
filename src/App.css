@@ -145,17 +145,6 @@ html, body {
             background: lightcyan;
         }
 
-        .boton-de-busqueda {
-            background-color: darkblue;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
         .SeccionBusqueda {
             padding: 6rem 6rem 0 6rem;
             background: lightcyan;
