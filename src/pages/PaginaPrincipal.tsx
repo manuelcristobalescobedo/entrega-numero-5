@@ -15,14 +15,35 @@ return (
     <section className="SeccionBusqueda">
         <div>
             <form className="ComponenteBusqueda">
-                <input placeholder="Buscar"></input>
-                    <button type="submit">
-                        <svg xmlns="http://www.w3.org/2000/svg" 
+                <input placeholder="Buscar" />
+                <Link to="/catalogo" className="search-link">       
+                {/* Boton de busqueda no puede estilizarse en css, no se aplica el background color, probablemente sea bueno dejarlo como componente */}
+                    <button
+                        type="submit"
+                        style={{
+                            backgroundColor: "darkblue",
+                            color: "#fff",
+                            border: "none",
+                            padding: "8px 16px",
+                            borderRadius: "4px",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "8px",
+                        }}
+                    >
+
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 -960 960 960"
-                            fill="currentColor">
+                            fill="currentColor"
+                            width="20"
+                            height="20"
+                        >
                             <path d="M762.69-160.92 524.46-399.16q-30 22.77-65.79 35.27-35.79 12.5-73.87 12.5-93.58 0-159.11-65.51-65.53-65.51-65.53-159.04 0-93.52 65.51-159.1 65.51-65.57 159.04-65.57 93.52 0 159.1 65.53 65.57 65.53 65.57 159.11 0 39.23-12.88 75.02-12.89 35.8-34.89 64.64l238.23 238.23-37.15 37.16ZM384.77-403.38q72.31 0 122.46-50.16 50.16-50.15 50.16-122.46t-50.16-122.46q-50.15-50.16-122.46-50.16t-122.46 50.16Q212.15-648.31 212.15-576t50.16 122.46q50.15 50.16 122.46 50.16Z"/>
                         </svg>
                     </button>
+                </Link>
             </form>
 
             <div className="ComponenteCategorias">
@@ -73,7 +94,7 @@ return (
   
   {/* Grid wrapper */}
   <div>
-    <Link to="/catalogo">
+    <Link to="/producto">
       <div style={{ backgroundImage: "url(/photos/Imagen1.jpg)" }}></div>
       <div>
         <h3>Título del ítem del catálogo</h3>
@@ -86,7 +107,7 @@ return (
       </div>
     </Link>
 
-    <Link to="/catalogo">
+    <Link to="/producto">
       <div style={{ backgroundImage: "url(/photos/Imagen2.jpg)" }}></div>
       <div>
         <h3>Título del ítem del catálogo</h3>
@@ -99,7 +120,7 @@ return (
       </div>
     </Link>
 
-    <Link to="/catalogo">
+    <Link to="/producto">
       <div style={{ backgroundImage: "url(/photos/Imagen3.jpg)" }}></div>
       <div>
         <h3>Título del ítem del catálogo</h3>
@@ -112,7 +133,7 @@ return (
       </div>
     </Link>
 
-    <Link to="/catalogo">
+    <Link to="/producto">
       <div style={{ backgroundImage: "url(/photos/Imagen4.jpg)" }}></div>
       <div>
         <h3>Título del ítem del catálogo</h3>
@@ -125,7 +146,7 @@ return (
       </div>
     </Link>
 
-    <Link to="/catalogo">
+    <Link to="/producto">
       <div style={{ backgroundImage: "url(/photos/Imagen5.jpg)" }}></div>
       <div>
         <h3>Título del ítem del catálogo</h3>
@@ -138,7 +159,7 @@ return (
       </div>
     </Link>
 
-    <Link to="/catalogo">
+    <Link to="/producto">
       <div style={{ backgroundImage: "url(/photos/Imagen6.jpg)" }}></div>
       <div>
         <h3>Título del ítem del catálogo</h3>
@@ -160,7 +181,7 @@ return (
 
         {/* Grid wrapper */}
         <div>
-            <Link to="/catalogo">
+            <Link to="/producto">
                 <div style={{backgroundImage: "url('/photos/Imagen1.jpg')"}}></div>
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -181,7 +202,7 @@ return (
                     </div>
                 </div>
             </Link>
-            <Link to="/catalogo">
+            <Link to="/producto">
                 <div style={{backgroundImage: "url('/photos/Imagen1.jpg')"}}></div>
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -202,7 +223,7 @@ return (
                     </div>
                 </div>
             </Link>
-            <Link to="/catalogo">
+            <Link to="/producto">
                 <div style={{backgroundImage: "url('/photos/Imagen1.jpg')"}}></div>
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" 
