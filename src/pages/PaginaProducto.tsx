@@ -1,5 +1,3 @@
-import mockProducts from "../component/Catalog";
-import { useParams, } from "react-router-dom";
 import Filtro from "../component/Filtro";
 import CarritoCompra from "../component/CarritoCompra";
 import "../App.css"
@@ -7,8 +5,6 @@ import "../App.css"
 
 
 export default function PaginaProducto() {
-  const {} = useParams();
-
   CarritoCompra();
   Filtro();
 
