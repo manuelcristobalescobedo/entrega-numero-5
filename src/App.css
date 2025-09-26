@@ -155,9 +155,8 @@ html, body {
             background: #b0ffff;
             aspect-ratio: 16/ 7.4;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .SeccionBusqueda > div > form {
@@ -195,17 +194,22 @@ html, body {
 
         .ComponenteBusqueda {
             margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+
         }
 
         .ComponenteCategorias {
-            display: flex;
-            flex-direction: row;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        padding: 30px;
         }
 
         .ComponenteCategorias > button {
             padding: 0;
             display: flex;
-            flex-direction: row;
             align-items: center;
             background: none;
             border: none;

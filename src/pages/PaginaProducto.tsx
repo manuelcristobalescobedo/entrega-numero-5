@@ -1,4 +1,3 @@
-import mockProducts from "../component/Catalog";
 import { useParams, } from "react-router-dom";
 import Filtro from "../component/Filtro";
 import CarritoCompra from "../component/CarritoCompra";
