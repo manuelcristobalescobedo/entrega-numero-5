@@ -256,21 +256,21 @@ return (
         <div>
             <h2>Título de la sección</h2>
             <div>
-                <a href="#">
+                <Link to="/catalogo">
                     <div style={{backgroundImage: "url('/photos/Imagen4.jpg')"}}>
                         <h3>Nombre de la categoría</h3>
                     </div>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/catalogo">
                     <div style={{backgroundImage: "url('/photos/Imagen5.jpg')"}}>
                         <h3>Nombre de la categoría</h3>
                     </div>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/catalogo">
                     <div style={{backgroundImage: "url('/photos/Imagen6.jpg')"}}>
                         <h3>Nombre de la categoría</h3>
                     </div>
-                </a>
+                </Link>
             </div>
         </div>
     </section>

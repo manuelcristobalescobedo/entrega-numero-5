@@ -22,7 +22,7 @@ function Validacion() {
             console.log("El nombre es valido");
 
         } else if (!regServicio.test(validacion)) {
-            console.log("El nombre no es valido");
+            console.error("El nombre no es valido");
         }
 
          if (validacion.length > 40 || validacion.length < 4) {
@@ -30,7 +30,7 @@ function Validacion() {
         }
 
         if (errorValidacion) {
-            console.log("Error de validación");
+            console.error("Error de validación");
 
         } else {
             console.log("Validación exitosa");

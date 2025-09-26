@@ -26,7 +26,7 @@ function ValidacionTop() {
             console.log("El nombre es valido");
       
         } else if (!regServicio.test(validacion)) {
-            console.log("El nombre no es valido");
+            console.error("El nombre no es valido");
         }
       
         if (validacion.length > 40 || validacion.length < 4) {
@@ -40,7 +40,7 @@ function ValidacionTop() {
         const num = Number(validacionNumero);
 
         if (isNaN(num) || num < 1 || num > 20) {
-            console.log("El numero debe ser entre 1 y 20")
+            console.error("El numero debe ser entre 1 y 20")
             validado = false;
         } else {
             console.log("El numero es valido")
@@ -49,21 +49,28 @@ function ValidacionTop() {
         //validacion de fecha
 
         if (!validacionFecha) {
-            console.log("la fecha es requirida");
+            console.error("la fecha es requirida");
             validado = false;
-        } else {
-            const hoy = new Date();
-            const fechaSeleccionada = new Date(validacionFecha);
-            if (fechaSeleccionada > hoy) {
-                console.log("la fecha no puede ser elegida")
+        } 
+        
+        const fechaSeleccionada = new Date(validacionFecha);
+
+            // <-- para tener una fecha en concreto -->
+
+        const fechaRecorte = new Date("2025-10-01");
+
+        if (fechaSeleccionada <= fechaRecorte) {
+            console.error("la fecha no puede ser elegida")
                 validado = false;
-            } else {
-                console.log("la fecha es valida")
-            }
+        } else {
+            console.log("la fecha es valida")
         }
 
-        if (validado) {
+
+        if (validado || !errorValidacion) {
             console.log("validacion correcta!")
+        } else {
+            console.error("No se puede validar")
         }
     };
 
