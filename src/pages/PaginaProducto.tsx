@@ -1,4 +1,3 @@
-import { useParams, } from "react-router-dom";
 import Filtro from "../component/Filtro";
 import CarritoCompra from "../component/CarritoCompra";
 import ProcesoCompra from "../component/Compra";
@@ -7,7 +6,7 @@ import ValidacionTop from "../component/ValidacionTop";
 
 
 export default function PaginaProducto() {
-  const {} = useParams();
+  
 
   CarritoCompra();
   Filtro();
