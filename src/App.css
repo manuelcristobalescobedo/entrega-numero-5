@@ -155,9 +155,8 @@ html, body {
             background: #b0ffff;
             aspect-ratio: 16/ 7.4;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .SeccionBusqueda > div > form {
@@ -195,17 +194,22 @@ html, body {
 
         .ComponenteBusqueda {
             margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+
         }
 
         .ComponenteCategorias {
-            display: flex;
-            flex-direction: row;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        padding: 30px;
         }
 
         .ComponenteCategorias > button {
             padding: 0;
             display: flex;
-            flex-direction: row;
             align-items: center;
             background: none;
             border: none;
@@ -1576,4 +1580,141 @@ html, body {
         .ComponenteTarjetaFiltros > div > input {
             display: flex;
             flex-direction: row;
+        }
+
+
+
+
+        .ProcesoCompra {
+            width: 100%;
+            height: 100vh;
+            background: rgba(224, 255, 255, 0.5);
+            justify-content: flex-start;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            overflow-y: auto; /* usa el scroll global de la página */
+        }
+
+        .ProcesoCompra > div:nth-of-type(1) {
+            position: relative; /* necesario para ubicar el botón X */
+            width: 50%;
+            background: #c7ffff;
+            height: max-content;
+            box-sizing: border-box;
+        }
+
+        .ProcesoCompra > div:nth-of-type(1) > div:nth-of-type(1) {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .ProcesoCompra > div:nth-of-type(1) > div:nth-of-type(1) > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .ProcesoCompra > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+            background-color: #c7ffff;
+        }
+
+        .ProcesoCompra > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+            background: lightcyan;
+        }
+
+        .ProcesoCompra > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) {
+            background: lightcyan;
+        }
+
+        .ProcesoCompra > div:nth-of-type(1) > div:nth-of-type(2) {
+            padding: 2rem;
+        }
+
+        .ComponenteCalendario2 {
+            display: flex;
+            flex-direction: column;
+            background-color: #b0ffff;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .ComponenteCalendario2 > div:nth-of-type(1) {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 2rem;
+        }
+
+        .ComponenteCalendario2 > div:nth-of-type(1) > button {
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            border: 0;
+            width: 14.2%;
+            text-align: center;
+            align-self: center;
+            cursor: pointer;
+        }
+
+        .ComponenteCalendario2 > div:nth-of-type(1) > h4 {
+            padding: 0;
+            margin: 0;
+            width: 71%;
+            text-align: center;
+            align-self: center;
+        }
+
+        .ComponenteCalendario2 > div:nth-of-type(2) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            row-gap: 1rem;
+        }
+
+        .ComponenteCalendario2 > div:nth-of-type(2) > p {
+            margin: 0;
+            text-align: center;
+            margin-bottom: 1rem;
+            align-self: center;
+        }
+
+        .ComponenteCalendario2 > div:nth-of-type(2) > a {
+            margin: 0;
+            cursor: pointer;
+            text-align: center;
+            align-self: center;
+        }
+
+        .ComponenteHorarios {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .ComponenteHorarios > a {
+            border: solid 1px black;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .ProcesoCompra > div > button {
+            position: absolute;
+            top: 8.25rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .ProcesoCompra > div > button > svg {
+            width: 1.5rem;
+            height: 1.5rem;
         }

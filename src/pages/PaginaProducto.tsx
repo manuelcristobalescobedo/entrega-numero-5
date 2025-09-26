@@ -1,12 +1,14 @@
 import Filtro from "../component/Filtro";
 import CarritoCompra from "../component/CarritoCompra";
+import ProcesoCompra from "../component/Compra";
 import "../App.css"
-
+import ValidacionTop from "../component/ValidacionTop";
 
 
 export default function PaginaProducto() {
   CarritoCompra();
   Filtro();
+  ProcesoCompra();
 
   return (
     <>
@@ -194,8 +196,8 @@ export default function PaginaProducto() {
                 <a>Solo</a>
                 <a>Pareja</a>
             </div>
-            <button className="ComponenteBotonFavoritos">
-                <p>Agregar a favoritos</p>
+            <button className="ComponenteBotonFavoritos abrir-compra">
+                <p>Comprar</p>
             </button>
             <button className="ComponenteBotonCarrito abrir-carrito">
                 <p>Agregar al carrito</p>
@@ -359,23 +361,16 @@ export default function PaginaProducto() {
         </div>
     </footer>
     {/* <--  Encabezado  --> */}
-
     <header className="Encabezado">
         <a>
             <svg xmlns="http:{/* <-- www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
                 <path d="M762.69-160.92 524.46-399.16q-30 22.77-65.79 35.27-35.79 12.5-73.87 12.5-93.58 0-159.11-65.51-65.53-65.51-65.53-159.04 0-93.52 65.51-159.1 65.51-65.57 159.04-65.57 93.52 0 159.1 65.53 65.57 65.53 65.57 159.11 0 39.23-12.88 75.02-12.89 35.8-34.89 64.64l238.23 238.23-37.15 37.16ZM384.77-403.38q72.31 0 122.46-50.16 50.16-50.15 50.16-122.46t-50.16-122.46q-50.15-50.16-122.46-50.16t-122.46 50.16Q212.15-648.31 212.15-576t50.16 122.46q50.15 50.16 122.46 50.16Z"/>
             </svg>
         </a>
-            <form className="ComponenteBusquedaPrincipal"> 
-                    <input placeholder="Lugar" ></input>
-                    <input placeholder="Fecha" ></input>
-                    <input placeholder="Personas"></input>
-        <button>
-            <svg xmlns="http:{/* <-- www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                <path d="M762.69-160.92 524.46-399.16q-30 22.77-65.79 35.27-35.79 12.5-73.87 12.5-93.58 0-159.11-65.51-65.53-65.51-65.53-159.04 0-93.52 65.51-159.1 65.51-65.57 159.04-65.57 93.52 0 159.1 65.53 65.57 65.53 65.57 159.11 0 39.23-12.88 75.02-12.89 35.8-34.89 64.64l238.23 238.23-37.15 37.16ZM384.77-403.38q72.31 0 122.46-50.16 50.16-50.15 50.16-122.46t-50.16-122.46q-50.15-50.16-122.46-50.16t-122.46 50.16Q212.15-648.31 212.15-576t50.16 122.46q50.15 50.16 122.46 50.16Z"/>
-            </svg>
-        </button>
-            </form>
+             {/* <-- ComponenteBusquedaPrincipal --> */}
+
+        <ValidacionTop></ValidacionTop>
+
         <button className="abrir-carrito">
             <svg xmlns="http:{/* <-- www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
                 <path d="M273.2-121.77q-24.92 0-42.16-17.41-17.23-17.42-17.23-42.35t17.41-42.16q17.42-17.23 42.35-17.23 24.92 0 42.16 17.41 17.23 17.42 17.23 42.34 0 24.93-17.41 42.17-17.42 17.23-42.35 17.23Zm412.43 0q-24.93 0-42.17-17.41-17.23-17.42-17.23-42.35t17.42-42.16q17.41-17.23 42.34-17.23 24.93 0 42.16 17.41 17.23 17.42 17.23 42.34 0 24.93-17.41 42.17-17.41 17.23-42.34 17.23ZM229.18-753.15h523.55q15.34 0 22.33 11.37 6.98 11.38 1.78 23.78l-93.68 227.12q-6.66 16.96-21.72 27.46-15.07 10.5-33.83 10.5H318.62l-45.12 78.23q-3.08 4.61-.19 10 2.88 5.38 8.65 5.38h463.42v47.96H285.53q-37.07 0-54.17-29.72-17.09-29.73 1.1-59.62l55.08-93.63-130.83-305.26H76.08v-47.96h112.8l40.3 94.39Z"/>
@@ -384,11 +379,8 @@ export default function PaginaProducto() {
         <button className="abrir-filtros">
             <div style={{ backgroundImage: "url(public/photos/Imagen5.jpg)" }}></div>
         </button>
-    </header>
-
-    
+    </header>  
     {/* <--  Carro de compras  --> */}
-
     <section className="CarroDeCompras">
         <div>
             <h3>Número de ítems</h3>
@@ -461,7 +453,6 @@ export default function PaginaProducto() {
         </div>
     </section>
     {/* <--  Filtros de busqueda  --> */}
-
     <section className="FiltrosDeBusqueda">
         <div>
             <h3>Filtros de búsqueda</h3>
@@ -611,6 +602,87 @@ export default function PaginaProducto() {
             </form>   
             <button id="cerrar-filtros">
                 <svg xmlns="http:{/* <-- www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                    <path d="m293.42-258.69-33.92-34.73L445.27-480 259.5-666.58l33.92-34.73L480-514.73l186.58-186.58 33.92 34.73L514.73-480 700.5-293.42l-33.92 34.73L480-445.27 293.42-258.69Z"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+    {/* <--  Proceso de compra  --> */}
+    <section className="ProcesoCompra">
+        <div>
+            <div>
+                <div>Fecha y hora</div>
+                <div>Cantidad de personas</div>
+                <div>Pago</div>
+            </div>
+            <div>
+                <h3>Seleccione fecha</h3>
+                <div className="ComponenteCalendario2">
+                    <div>
+                        <button>
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M13.7115 17.7115L6 10L13.7115 2.28857L14.8317 3.40878L8.24021 10L14.8317 16.5913L13.7115 17.7115Z"/>
+                            </svg>
+                        </button>
+                        <h4>Enero</h4>
+                        <button>
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M7.12021 17.7115L6 16.5913L12.5912 10L6 3.40878L7.12021 2.28857L14.8317 10L7.12021 17.7115Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <p>L</p>
+                        <p>M</p>
+                        <p>M</p>
+                        <p>J</p>
+                        <p>V</p>
+                        <p>S</p>
+                        <p>D</p>
+                        <a>1</a>
+                        <a>2</a>
+                        <a>3</a>
+                        <a>4</a>
+                        <a>5</a>
+                        <a>6</a>
+                        <a>7</a>
+                        <a>8</a>
+                        <a>9</a>
+                        <a>10</a>
+                        <a>11</a>
+                        <a>12</a>
+                        <a>13</a>
+                        <a>14</a>
+                        <a>15</a>
+                        <a>16</a>
+                        <a>17</a>
+                        <a>18</a>
+                        <a>19</a>
+                        <a>20</a>
+                        <a>21</a>
+                        <a>22</a>
+                        <a>23</a>
+                        <a>24</a>
+                        <a>25</a>
+                        <a>26</a>
+                        <a>27</a>
+                        <a>28</a>
+                        <a>29</a>
+                        <a>30</a>
+                        <a>31</a>
+                    </div>
+                </div>
+                <h3>Disponibilidad de horarios</h3>
+                <div className="ComponenteHorarios">
+                    <a>09:20</a>
+                    <a>11:20</a>
+                    <a>13:20</a>
+                    <a>15:20</a>
+                    <a>17:20</a>
+                </div>
+            </div>
+            <button id="cerrar-compra">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
                     <path d="m293.42-258.69-33.92-34.73L445.27-480 259.5-666.58l33.92-34.73L480-514.73l186.58-186.58 33.92 34.73L514.73-480 700.5-293.42l-33.92 34.73L480-445.27 293.42-258.69Z"/>
                 </svg>
             </button>
